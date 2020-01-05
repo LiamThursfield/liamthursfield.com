@@ -16,6 +16,7 @@
                         hover:bg-blue-700 hover:border-blue-700 hover:text-gray-900
                     "
                     href="https://fortnite-tracker.liamthursfield.com"
+                    target="_blank"
                 >
                     Fortnite Tracker
                 </a>
@@ -27,6 +28,7 @@
                         hover:bg-blue-700 hover:border-blue-700 hover:text-gray-900
                     "
                     href="https://fortnite-tracker.liamthursfield.com"
+                    target="_blank"
                 >
                     Youtube Playlist Details
                 </a>
