@@ -15,8 +15,9 @@
                         md:w-1/3
                         hover:bg-blue-700 hover:border-blue-700 hover:text-gray-900
                     "
-                    href="https://d-script.liamthursfield.com"
+                    href="https://d-script.liamthursfield.com?utm_source=liamthursfield.com"
                     target="_blank"
+                    @click="dataLayerEvent('button_click_home_d_script')"
                 >
                     d-script
                 </a>
@@ -27,8 +28,9 @@
                         md:w-1/3
                         hover:bg-blue-700 hover:border-blue-700 hover:text-gray-900
                     "
-                    href="https://fortnite-tracker.liamthursfield.com"
+                    href="https://fortnite-tracker.liamthursfield.com?utm_source=liamthursfield.com"
                     target="_blank"
+                    @click="dataLayerEvent('button_click_home_fortnite_tracker')"
                 >
                     Fortnite Tracker
                 </a>
@@ -39,8 +41,9 @@
                         md:w-1/3
                         hover:bg-blue-700 hover:border-blue-700 hover:text-gray-900
                     "
-                    href="https://youtube-playlist-details.liamthursfield.com"
+                    href="https://youtube-playlist-details.liamthursfield.com?utm_source=liamthursfield.com"
                     target="_blank"
+                    @click="dataLayerEvent('button_click_home_ytpd')"
                 >
                     Youtube Playlist Details
                 </a>
@@ -51,5 +54,13 @@
 
 <script>
     export default {
+        name: "ComingSoonComponent",
+        methods: {
+            dataLayerEvent(event_name) {
+                if (window.dataLayer) {
+                    window.dataLayer.push({'event': event_name});
+                }
+            }
+        }
     }
 </script>
