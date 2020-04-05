@@ -1,0 +1,39 @@
+input {
+    &[type=email],
+    &[type=number],
+    &[type=password],
+    &[type=tel],
+    &[type=text],
+    &[type=url]
+    {
+        &:not(.appearance-none) {
+            @apply appearance-none bg-gray-850 border border-gray-800 outline-none py-2 px-3 text-gray-600;
+
+            &:focus {
+                @apply outline-none shadow-outline-white;
+            }
+
+            &:not(.square) {
+                @apply rounded;
+            }
+
+            &:not(.no-transition) {
+                @apply duration-500 ease-in-out transition-shadow
+            }
+
+            &.error {
+                @apply border-red-600;
+            }
+        }
+    }
+}
+
+.input-group {
+    @apply flex flex-col;
+}
+
+@screen md {
+    .input-group {
+        @apply flex-row items-center
+    }
+}

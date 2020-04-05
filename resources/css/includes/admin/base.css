@@ -1,0 +1,13 @@
+html {
+    @apply font-sans;
+    @apply text-gray-600;
+}
+
+::selection { /* WebKit/Blink Browsers */
+    background: theme('colors.gray.900');
+    color: theme('colors.green.700');
+}
+::-moz-selection { /* Gecko Browsers */
+    background: theme('colors.gray.900');
+    color: theme('colors.green.700');
+}

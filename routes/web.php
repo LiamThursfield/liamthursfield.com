@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes([
     'register' => false,
     'reset' => false,
@@ -22,3 +18,12 @@ Auth::routes([
 ]);
 
 Route::get('/admin', 'AdminController@index')->name('admin');
+
+// App Routes
+Route::group([
+    'namespace'  => 'App',
+    'middleware' => 'web',
+    'as'         => 'app.'
+],function () {
+    Route::get('/', 'AppController@index')->name('home');
+});
