@@ -51,7 +51,7 @@
             </div>
 
             <div
-                class="absolute bottom-0 left-0 opacity-25 pb-2 right-0 text-center text-yellow-500"
+                class="absolute bottom-0 left-0 opacity-25 pb-12 right-0 text-center text-yellow-500"
             >
                 Keep Scrolling
             </div>
@@ -62,7 +62,7 @@
     <div class="border-t border-yellow-500 mt-4 opacity-25"></div>
 
     <!-- Projects -->
-    <section class="container mb-32 mt-12 mx-auto px-4">
+    <section class="container mb-32 mt-20 mx-auto px-4">
         <h2 class="flex flex-col font-bold font-serif leading-none text-3xl">
             <span class="font-sans pb-1 tracking-widest text-yellow-600 text-base">
                 FEATURED

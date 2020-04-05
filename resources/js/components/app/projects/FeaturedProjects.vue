@@ -1,10 +1,10 @@
 <template>
-    <section class="flex flex-row flex-wrap -mb-2 mt-6 -mx-4 ">
+    <section class="flex flex-row flex-wrap -mb-4 mt-4 -mx-4 ">
         <div
             v-for="project in featured_projects"
             :key="`${project.name}-featured-card`"
             class="
-                px-4 py-2 w-full
+                px-4 py-4 w-full
                 lg:w-1/3
             "
         >
