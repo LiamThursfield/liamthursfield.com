@@ -31,7 +31,8 @@
             >
                 <h1
                     class="
-                        font-bold font-serif leading-none text-6xl
+                        font-bold font-serif leading-none text-5xl
+                        sm:text-6xl
                         md:text-5xl
                         lg:text-6xl
                     "
@@ -51,7 +52,7 @@
             </div>
 
             <div
-                class="absolute bottom-0 left-0 opacity-25 pb-12 right-0 text-center text-yellow-500"
+                class="absolute bottom-0 left-0 opacity-25 pb-16 right-0 text-center text-yellow-500"
             >
                 Keep Scrolling
             </div>
