@@ -1,0 +1,14 @@
+html {
+    @apply bg-gray-900;
+    @apply font-sans;
+    @apply text-gray-100;
+}
+
+::selection { /* WebKit/Blink Browsers */
+    background: theme('colors.gray.700');
+    color: theme('colors.yellow.600');
+}
+::-moz-selection { /* Gecko Browsers */
+    background: theme('colors.gray.700');
+    color: theme('colors.yellow.600');
+}
