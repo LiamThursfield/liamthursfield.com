@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1bd7900-b632-4b99-a840-b8f6e6c561c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/app/projects/FeaturedProjects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/app/projects/FeaturedProjects.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/app/projects/ProjectCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/app/projects/ProjectCard.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608387683476</updated>
-      <workItem from="1608387686086" duration="4586000" />
+      <workItem from="1608387686086" duration="4966000" />
     </task>
     <task id="LOCAL-00001" summary="Fix datalayer events">
       <created>1608390293333</created>
@@ -177,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608391106678</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Style Fixes &amp; Updates&#10;- Add Link to Project Image and Title&#10;- Fix DataLayer event on mobile viewports&#10;- Updates to clean Project card styling">
+      <created>1608394054145</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608394054145</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +199,8 @@
     <MESSAGE value="Fix datalayer events" />
     <MESSAGE value="Prod build&#10;- composer upgrade&#10;- yarn upgrade&#10;- add purgecss" />
     <MESSAGE value="Datalayer - Add events on middle and right click" />
-    <option name="LAST_COMMIT_MESSAGE" value="Datalayer - Add events on middle and right click" />
+    <MESSAGE value="Style Fixes &amp; Updates&#10;- Add Link to Project Image and Title&#10;- Fix DataLayer event on mobile viewports&#10;- Updates to clean Project card styling" />
+    <MESSAGE value="Update gitignote" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update gitignote" />
   </component>
 </project>
