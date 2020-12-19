@@ -70,7 +70,7 @@
                 "
                 :href="project.url"
                 target="_blank"
-                @click="dataLayerEvent(project.event_name)"
+                @click="dataLayerEvent(project.event)"
             >
                 View Project
             </a>
