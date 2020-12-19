@@ -4,7 +4,7 @@
             v-for="project in featured_projects"
             :key="`${project.name}-featured-card`"
             class="
-                px-4 py-4 w-full
+                flex flex-col px-4 py-4 w-full
                 lg:w-1/3
             "
         >

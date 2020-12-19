@@ -2,7 +2,7 @@
     <article
         class="
             bg-lilac-800 border-r-4 border-yellow-600 flex flex-row rounded-l-lg
-            lg:border-r-0 lg:border-b-4 lg:flex-col lg:rounded-l-none lg:rounded-t-lg
+            lg:border-r-0 lg:border-b-4 lg:flex-col lg:h-full lg:rounded-l-none lg:rounded-t-lg
         "
     >
         <div
@@ -12,11 +12,21 @@
                 lg:w-full
             "
         >
-            <img
-                class="overflow-hidden rounded-lg w-full"
-                :src="project.image"
-                :alt="`${project.name} preview`"
+            <a
+                class="block"
+                :href="project.url"
+                target="_blank"
+                title="View Project"
+                @click="dataLayerEvent(project.event)"
+                @click.middle="dataLayerEvent(project.event)"
+                @click.right="dataLayerEvent(project.event)"
             >
+                <img
+                    class="overflow-hidden rounded-lg w-full"
+                    :src="project.image"
+                    :alt="`${project.name} preview`"
+                >
+            </a>
 
             <a
                 class="
@@ -26,7 +36,9 @@
                 "
                 :href="project.url"
                 target="_blank"
-                @click="dataLayerEvent(project.event_name)"
+                @click="dataLayerEvent(project.event)"
+                @click.middle="dataLayerEvent(project.event)"
+                @click.right="dataLayerEvent(project.event)"
             >
                 View Project
             </a>
@@ -36,7 +48,7 @@
             class="
                 flex flex-col px-6 py-4 w-full
                 md:w-1/2
-                lg:pb-12 lg:pt-6 lg:px-6 lg:w-auto
+                lg:h-full lg:pb-12 lg:pt-6 lg:px-6 lg:w-auto
             "
         >
             <p
@@ -47,9 +59,17 @@
                 {{ project.intro }}
             </p>
 
-            <div>
+            <div class="lg:flex-1">
                 <h3 class="font-bold font-serif mt-4 text-2xl">
-                    {{ project.name }}
+                    <a
+                        :href="project.url"
+                        target="_blank"
+                        @click="dataLayerEvent(project.event)"
+                        @click.middle="dataLayerEvent(project.event)"
+                        @click.right="dataLayerEvent(project.event)"
+                    >
+                        {{ project.name }}
+                    </a>
                 </h3>
 
                 <p
