@@ -71,6 +71,8 @@
                 :href="project.url"
                 target="_blank"
                 @click="dataLayerEvent(project.event)"
+                @click.middle="dataLayerEvent(project.event)"
+                @click.right="dataLayerEvent(project.event)"
             >
                 View Project
             </a>
@@ -89,6 +91,7 @@
         },
         methods: {
             dataLayerEvent(event_name) {
+                console.log(event_name);
                 if (window.dataLayer) {
                     window.dataLayer.push({'event': event_name});
                 }
