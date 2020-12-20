@@ -10,7 +10,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Liam Thursfield') }}</title>
+    <title>Liam Thursfield | Web Developer</title>
+    <meta
+        name="description"
+        content="Hi, I'm Liam, a web developer based in Staffordshire, England."
+    >
 
     <!-- Scripts -->
     @include('layouts._partials.head.routes-script')
