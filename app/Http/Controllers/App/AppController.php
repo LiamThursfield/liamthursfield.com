@@ -17,7 +17,6 @@ class AppController extends Controller
     public function index()
     {
         $page = new TviPage(Http::get('https://tvi.liamthursfield.com/api/page?page_url=/')->json());
-//        dd($page);
         return view('app.index', [
             'page' => $page
         ]);
