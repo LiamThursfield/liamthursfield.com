@@ -17,9 +17,9 @@
                 :href="project.url"
                 target="_blank"
                 title="View Project"
-                @click="dataLayerEvent(project.event)"
-                @click.middle="dataLayerEvent(project.event)"
-                @click.right="dataLayerEvent(project.event)"
+                @click="dataLayerEvent(project['event-name'])"
+                @click.middle="dataLayerEvent(project['event-name'])"
+                @click.right="dataLayerEvent(project['event-name'])"
             >
                 <img
                     class="overflow-hidden rounded-lg w-full"
@@ -36,9 +36,9 @@
                 "
                 :href="project.url"
                 target="_blank"
-                @click="dataLayerEvent(project.event)"
-                @click.middle="dataLayerEvent(project.event)"
-                @click.right="dataLayerEvent(project.event)"
+                @click="dataLayerEvent(project['event-name'])"
+                @click.middle="dataLayerEvent(project['event-name'])"
+                @click.right="dataLayerEvent(project['event-name'])"
             >
                 View Project
             </a>
@@ -56,7 +56,7 @@
                     font-bold opacity-55 text-yellow-600 text-xs tracking-wider
                 "
             >
-                {{ project.intro }}
+                {{ project.tags }}
             </p>
 
             <div class="lg:flex-1">
@@ -64,9 +64,9 @@
                     <a
                         :href="project.url"
                         target="_blank"
-                        @click="dataLayerEvent(project.event)"
-                        @click.middle="dataLayerEvent(project.event)"
-                        @click.right="dataLayerEvent(project.event)"
+                        @click="dataLayerEvent(project['event-name'])"
+                        @click.middle="dataLayerEvent(project['event-name'])"
+                        @click.right="dataLayerEvent(project['event-name'])"
                     >
                         {{ project.name }}
                     </a>
@@ -90,9 +90,9 @@
                 "
                 :href="project.url"
                 target="_blank"
-                @click="dataLayerEvent(project.event)"
-                @click.middle="dataLayerEvent(project.event)"
-                @click.right="dataLayerEvent(project.event)"
+                @click="dataLayerEvent(project['event-name'])"
+                @click.middle="dataLayerEvent(project['event-name'])"
+                @click.right="dataLayerEvent(project['event-name'])"
             >
                 View Project
             </a>
@@ -111,7 +111,6 @@
         },
         methods: {
             dataLayerEvent(event_name) {
-                console.log(event_name);
                 if (window.dataLayer) {
                     window.dataLayer.push({'event': event_name});
                 }

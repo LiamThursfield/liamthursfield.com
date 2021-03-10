@@ -2,7 +2,7 @@
     <header>
         <div class="bg-gray-900 flex items-center h-12 relative w-full z-10">
             <div class="
-                    container flex flex-row justify-center mx-auto relative px-4
+                    container flex flex-row items-center justify-center mx-auto relative px-4
                     md:items-baseline md:justify-between
                 "
             >
@@ -40,6 +40,8 @@
 
 
 <script>
+    import _ from 'lodash';
+
     import HeaderNavigationDesktop from './HeaderNavigationDesktop';
     import HeaderNavigationMobile from './HeaderNavigationMobile';
 
@@ -48,6 +50,12 @@
         components: {
             HeaderNavigationDesktop,
             HeaderNavigationMobile
+        },
+        props: {
+            menu: {
+                required: true,
+                type: Object
+            }
         },
         data() {
             return {
@@ -61,24 +69,19 @@
         },
         methods: {
             buildNavigation() {
-                // This could be via api call / props etc.
-                this.navigation_links = {
-                    dashboard: {
-                        label: "Home",
-                        url: route('app.home'),
-                        require_auth: false
-                    },
-                    // about: {
-                    //     label: "About",
-                    //     url: route('app.about'),
-                    //     require_auth: false
-                    // },
-                    // contact: {
-                    //     label: "Contact",
-                    //     url: route('app.contact'),
-                    //     require_auth: false
-                    // },
-                };
+                this.navigation_links = {};
+
+                try {
+                    _.forEach(this.menu.menu_items, menuItem => {
+                        this.navigation_links[menuItem.label] = {
+                            label: menuItem.label,
+                            url: menuItem.href,
+                            require_auth: false,
+                        }
+                    })
+                } catch (e) {
+                    return this.navigation_links;
+                }
             },
             setMobileNavVisible(is_visible) {
                 this.is_mobile_nav_visible = is_visible;

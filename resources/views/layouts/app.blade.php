@@ -10,11 +10,27 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Liam Thursfield | Web Developer</title>
-    <meta
-        name="description"
-        content="Hi, I'm Liam, a web developer based in Staffordshire, England."
-    >
+    <title>
+        {{ $page->getMetadataField('title', 'Liam Thursfield | Web Developer') }}
+    </title>
+
+    <meta name="description" content="{{ $page->getMetadataField('description', "Hi, I'm Liam, a web developer based in Staffordshire, England.") }}" >
+
+    @php
+        $ogFields = [
+            'og_description'    => 'og:description',
+            'og_image'          => 'og:image',
+            'og_title'          => 'og:title',
+            'og_type'           => 'og:type',
+            'og_url'            => 'og:url',
+        ];
+    @endphp
+
+    @foreach($ogFields as $slug => $property)
+        @if($page->getMetaDataField($slug))
+            <meta property="{{ $property }}" content="{{ $page->getMetaDataField($slug) }}" />
+        @endif
+    @endforeach
 
     <!-- Scripts -->
     @include('layouts._partials.head.routes-script')
@@ -31,7 +47,9 @@
 <body>
 <div id="app">
 
-    <header-main></header-main>
+    <header-main
+        :menu="{{ json_encode($page->getLayoutContentFieldData('header-menu')) }}"
+    ></header-main>
 
     <main>
         @yield('content')
@@ -44,13 +62,15 @@
     <footer class="bg-lilac-900 py-12">
         <div class="container flex flex-col items-center mx-auto relative ">
             <p class="font-bold">
-                &copy; 2020
+                &copy; {{ \Illuminate\Support\Facades\Date::now()->year }}
                 <span class="text-yellow-600">Liam Thursfield</span>
             </p>
 
-            <p class="font-serif mt-3 opacity-50 text-sm">
-                More content coming soon...
-            </p>
+            @if($page->getLayoutContentFieldData('footer-text'))
+                <div class="mt-2">
+                    {!! $page->getLayoutContentFieldData('footer-text') !!}
+                </div>
+            @endif
         </div>
     </footer>
 </div>

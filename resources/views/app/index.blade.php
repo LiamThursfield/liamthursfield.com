@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['page' => $page])
 
 @section('content')
 
@@ -18,7 +18,7 @@
             >
                 <img
                     alt="Developer Illustration"
-                    src="/images/illustrations/undraw_developer_activity_bv83.svg"
+                    src="{{ $page->getContentFieldData('header-image', '/images/illustrations/undraw_developer_activity_bv83.svg') }}"
                 >
             </div>
 
@@ -47,7 +47,7 @@
                         md:mt-1
                     "
                 >
-                    WEB DEVELOPER
+                    {{ $page->getContentFieldData('header-tagline', 'WEB DEVELOPER') }}
                 </h2>
             </div>
 
@@ -63,14 +63,18 @@
     <div class="border-t border-yellow-500 mt-4 opacity-25"></div>
 
     <!-- Projects -->
-    <section class="container mb-32 mt-20 mx-auto px-4">
-        <h2 class="flex flex-col font-bold font-serif leading-none text-3xl">
-            <span class="font-sans pb-1 tracking-widest text-yellow-600 text-base">
-                FEATURED
-            </span>
-            Projects
-        </h2>
+    @if($page->getContentFieldData('projects'))
+        <section class="container mb-32 mt-20 mx-auto px-4">
+            <h2 class="flex flex-col font-bold font-serif leading-none text-3xl">
+                <span class="font-sans pb-1 tracking-widest text-yellow-600 text-base">
+                    FEATURED
+                </span>
+                Projects
+            </h2>
 
-        <featured-projects></featured-projects>
-    </section>
+            <featured-projects
+                :projects="{{ json_encode($page->getContentFieldData('projects')) }}"
+            ></featured-projects>
+        </section>
+    @endif
 @endsection
